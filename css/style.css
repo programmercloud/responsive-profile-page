@@ -29,17 +29,7 @@ a {
   background: url("../img/bg.jpeg") no-repeat 50% 20% / cover;
   min-height: calc(100px + 15vw);
 }
-@media (min-width: 868px) {
-  .header__wrapper .cols__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-  }
-}
+
 .header__wrapper .cols__container .left__col {
   padding: 25px 20px;
   text-align: center;
@@ -47,17 +37,7 @@ a {
   position: relative;
   margin: 0 auto;
 }
-@media (min-width: 868px) {
-  .header__wrapper .cols__container .left__col {
-    padding: 25px 0px;
-  }
-}
-@media (min-width: 1017px) {
-  .header__wrapper .cols__container .left__col {
-    margin: 0;
-    margin-right: auto;
-  }
-}
+
 .header__wrapper .cols__container .left__col .img__container {
   position: absolute;
   top: -60px;
@@ -141,21 +121,10 @@ a {
   justify-content: space-between;
   flex-direction: column;
 }
-@media (min-width: 1016px) {
-  .header__wrapper .cols__container .right__col nav {
-    flex-direction: row;
-  }
-}
 .header__wrapper .cols__container .right__col nav ul {
   display: flex;
   gap: 20px;
   flex-direction: column;
-}
-@media (min-width: 868px) {
-  .header__wrapper .cols__container .right__col nav ul {
-    flex-direction: row;
-    gap: 30px;
-  }
 }
 .header__wrapper .cols__container .right__col nav ul li a {
   text-transform: uppercase;
@@ -177,11 +146,6 @@ a {
 .header__wrapper .cols__container .right__col nav button:hover {
   opacity: 0.8;
 }
-@media (min-width: 1016px) {
-  .header__wrapper .cols__container .right__col nav button {
-    margin-top: 0;
-  }
-}
 .header__wrapper .cols__container .right__col .photos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -193,10 +157,42 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
+/* Responsiveness */
+
 @media (min-width: 868px) {
+  .header__wrapper .cols__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+  }
+  .header__wrapper .cols__container .left__col {
+    padding: 25px 0px;
+  }
+  .header__wrapper .cols__container .right__col nav ul {
+    flex-direction: row;
+    gap: 30px;
+  }
   .header__wrapper .cols__container .right__col .photos {
     height: 365px;
     overflow: auto;
     padding: 0 0 30px;
+  }
+}
+
+@media (min-width: 1017px) {
+  .header__wrapper .cols__container .left__col {
+    margin: 0;
+    margin-right: auto;
+  }
+  .header__wrapper .cols__container .right__col nav {
+    flex-direction: row;
+  }
+  .header__wrapper .cols__container .right__col nav button {
+    margin-top: 0;
   }
 }
